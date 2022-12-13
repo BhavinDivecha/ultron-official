@@ -58,34 +58,41 @@ async function AddRazorPayScript()  {
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
             alert("Payment Successful");
-            // const sendData = await fetch('https://payment-ultron-official.netlify.app/.netlify/functions/api/create/send/data', {
-            //     method: 'POST',
-            //     mode: 'no-cors',
-            //     body: JSON.stringify({
-                   
-            //       }),
-            //       headers: {
-            //         "Content-Type": "application/json",
-            //       },
-            // }).then((t) =>
-            //     t.json()
-            // )
-            const data_Send = await fetch('https://payment-ultron-official.netlify.app/.netlify/functions/api/create/send/data', {
-        method: 'POST',
-        // mode: 'no-cors',
-        body: JSON.stringify({
-            OrderID: response.razorpay_order_id,
-            PaymentID: response.razorpay_payment_id,
-            firstname: document.getElementById("firstname").value,
-            email: document.getElementById("email").value,
-            mnumber: document.getElementById("mnumber").value,
-            amount: document.getElementById("amount").value,
-        }),
-    }).then((t) =>
-        // console.log(t)
-        t.json()
-    )
-            console.log(data_Send);
+            const data = await fetch('http://localhost:9000/.netlify/functions/api/create/send/data', {
+                method: 'POST',
+                // mode: 'no-cors',
+                body: JSON.stringify({
+                    OrderID: response.razorpay_order_id,
+                    PaymentID: response.razorpay_payment_id,
+                    firstname: document.getElementById("firstname").value,
+                    email: document.getElementById("email").value,
+                    mnumber: document.getElementById("mnumber").value,
+                    amount: document.getElementById("amount").value,
+                }),
+            }).then((t) =>
+                // console.log(t)
+                t.json()
+            )
+            console.log(data);
+            const sendData = await fetch('https://payment-ultron-official.netlify.app/.netlify/functions/api/create/send/data', {
+                method: 'POST',
+                body: JSON.stringify({
+                    OrderID: response.razorpay_order_id,
+                    PaymentID: response.razorpay_payment_id,
+                    firstname: document.getElementById("firstname").value,
+                    email: document.getElementById("email").value,
+                    mnumber: document.getElementById("mnumber").value,
+                    amount: document.getElementById("amount").value,
+                  }),
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+            }).then((t) =>
+                t.json()
+            )
+            if (data.status === 200) {
+                alert('Send Successful');
+            }
         },
         "prefill": {
             "name": document.getElementById("firstname").value,
