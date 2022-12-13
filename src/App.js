@@ -23,9 +23,6 @@ import SignUp from "./pages/signup";
 import TeamPage from "./pages/team";
 import TeamSinglePage from "./pages/team-single";
 import ErrorPage from "./pages/errorpage";
-import AddRazorPayScript from "./pages/AddRazorPayScript";
-import PassSection from "./component/section/pass";
-
 // import Footer from "./component/layout/footer";
 // import Header from "./component/layout/header";
 // import PageHeader from './component/layout/pageheader';
@@ -42,9 +39,7 @@ function App() {
 			<ScrollToTop />
 			<Routes>
 				
-				<Route path="/" element={<HomeTwo />} />
-				<Route path="/pass" element={<PassSection imgUrl={'https://s3.ap-south-1.amazonaws.com/www.blackstonegamedevelopment.in/test.png'}/>} />
-				
+				<Route path="/" element={<HomeTwo />} />				
 				<Route path="about" element={<AboutPage />} />
 				<Route path="gallery" element={<GalleryPage />} />
 				<Route path="game-list" element={<GameListSection />} />
