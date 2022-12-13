@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.bg-img-pass {
+  /* The image used */
+  background-image: url("https://s3.ap-south-1.amazonaws.com/www.blackstonegamedevelopment.in/pass1.jpeg");
+
+  min-height: 426px;
+  min-width:1280px;
+  max-width:1280px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add styles to the form container */
+.container-pass {
+    position: absolute;
+    right: 0;
+    margin: 100px 64px 22px 0;
+    max-width: 300px;
+    padding: 16px;
+}
