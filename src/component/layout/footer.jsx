@@ -168,7 +168,7 @@ class Footer extends Component {
                         </div>
                     </div>
                 </div> */}
-                {/* <div className="footer-bottom">
+                <div className="footer-bottom">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -178,7 +178,7 @@ class Footer extends Component {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </footer>
         );
     }
