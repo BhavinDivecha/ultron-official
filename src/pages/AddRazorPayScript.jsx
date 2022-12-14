@@ -110,7 +110,7 @@ async function AddRazorPayScript()  {
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
             alert("Payment Successful");
-            const data = await fetch('http://localhost:8952/api/create/send/data', {
+            const data = await fetch('http://www.payment.ultronofficial.online/api/create/send/data', {
                 method: 'POST',
                 // mode: 'no-cors',
                 body: JSON.stringify({
@@ -133,7 +133,7 @@ async function AddRazorPayScript()  {
             else {
                 bgUrl = 'http://www.blackstonegamedevelopment.in/pass1.jpeg';
             }
-            const data_pdf = await fetch('http://localhost:8952/api/sendmail', {
+            const data_pdf = await fetch('http://www.payment.ultronofficial.online/api/sendmail', {
                 method: 'POST',
                 // mode: 'no-cors',
                 body: JSON.stringify({
