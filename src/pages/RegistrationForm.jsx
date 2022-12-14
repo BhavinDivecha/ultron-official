@@ -82,8 +82,8 @@ class RegistrationForm extends Component {
                                         style={{ color: "#9ca0b7" }}
                                         onChange={(e)=>{this.setState({regPrice: e.target.value});}}
                                     >
-                                        <option value="10">Normal pass</option>
-    <option value="20" >VIP pass</option>
+                                        <option value="50">Normal pass</option>
+    <option value="799" >VIP pass</option>
                                     </select>
                                 </div>
                                 <div className="form-group">

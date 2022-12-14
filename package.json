@@ -14,6 +14,7 @@
     "cryptr": "^6.0.3",
     "express": "^4.18.1",
     "file-saver": "^2.0.5",
+    "html-to-pdf-js": "^0.9.3",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "js-sha512": "^0.8.0",
