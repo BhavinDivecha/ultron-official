@@ -1,6 +1,7 @@
 import { Component } from "react";
 import './pass.css';
 import { Link } from "react-router-dom";
+import queryString from 'query-string';
 
 
 const title = <h2 className="mb-3"></h2>;
@@ -16,8 +17,10 @@ const btnText = 'Download';
 class PassSection extends Component {
     render() { 
         const { imgUrl } = this.props;
-        
-        return (
+      
+      let params = queryString.parse(this.props.location.search)
+      console.log(params);
+      return (
 
         <div className="bg-img-pass">
             <div className="container-pass">
