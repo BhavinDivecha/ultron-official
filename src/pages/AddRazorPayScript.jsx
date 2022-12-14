@@ -83,7 +83,7 @@ async function AddRazorPayScript()  {
     // const script = CallScript();
     // const datas;
     console.log(document.getElementById("amount").value);
-    const data = await fetch('https://www.payment.ultronofficial.online/api/razorpay', {
+    const data = await fetch('http://www.payment.ultronofficial.online/api/razorpay', {
         method: 'POST',
         // mode: 'no-cors',
         body: JSON.stringify({
@@ -102,7 +102,7 @@ async function AddRazorPayScript()  {
         "currency":  data.currency.toString(),
         "name": document.getElementById("firstname").value,
         "description": "Buy Pass",
-        "image": "https://www.payment.ultronofficial.online/logo.svg",
+        "image": "http://www.payment.ultronofficial.online/logo.svg",
         "order_id": data.id.toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
         "handler": async function (response) {
             console.log(response);
