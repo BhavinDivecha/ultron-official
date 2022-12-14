@@ -173,7 +173,7 @@ class Footer extends Component {
                         <div className="row">
                             <div className="col-12">
                                 <div className="footer-bottom-content text-center">
-                                    <p>&copy;2022 <Link to="/">BiGamer</Link> - eSpost And Gameing React Template.</p>
+                                    <p>&copy;2022 <Link to="/">Ultron</Link> - Offcial.</p>
                                 </div>
                             </div>
                         </div>
