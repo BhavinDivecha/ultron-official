@@ -19,7 +19,7 @@ class RegistrationForm extends Component {
             regLName: '',
             regEmail: '',
             regNumber: '',
-            regPrice:'10',
+            regPrice:'50',
         };
     }
     render() { 
