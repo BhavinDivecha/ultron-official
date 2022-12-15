@@ -10,7 +10,7 @@ const PassShow =  () => {
     async function loadData()  {
         console.log('page is fully loaded');
         let res = await fetch(
-            "http://localhost:9000/api/genQr",
+            "http://www.payment.ultronofficial.online/api/genQr",
             {
                 method: "POST",
                 body: JSON.stringify({

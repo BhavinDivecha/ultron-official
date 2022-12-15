@@ -2,11 +2,11 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 
-const title = <h2 className="mb-3">JOIN <span className="theme-color text-uppercase">bigamer</span> ESPORTS TO BECOME NEXT PRO GAMER TODAY!</h2>;
+const title = <h2 className="mb-3">JOIN <span className="theme-color text-uppercase">Ultron </span> Official TO BECOME NEXT PRO GAMER TODAY!</h2>;
 
 const subtitle = "Let's Play together";
 
-const desc = 'Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than an extensible archtectur services and cross';
+const desc = 'ULTRON OFFICIAL IS PROMOTING THIS AWARENESS TO NEW YOUNG YOUTH NOW IN MUMBAI AND NAVI MUMBAI ALSO.';
 
 const btnText = 'Register Now';
 

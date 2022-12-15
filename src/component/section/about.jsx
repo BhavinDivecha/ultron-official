@@ -11,13 +11,13 @@ let AboutListContent = [
         imgUrl: 'https://ultron-official.netlify.app/assets/images/about/icon-1.png',
         imgAlt: 'About Icon',
         title: '20k+ Community Earning',
-        desc: '',
+        desc: 'Join the 20K+ community earning event and become a top earning member! Join us now!',
     },
     {
         imgUrl: 'https://ultron-official.netlify.app/assets/images/about/icon-2.png',
         imgAlt: 'About Icon',
         title: '1m+ Registered Players',
-        desc: '',
+        desc: 'We are so excited to announce that we now have over one million registered players!',
     }
 ]
 

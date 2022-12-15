@@ -102,7 +102,7 @@ class Footer extends Component {
                                              <div className="fm-item-widget lab-item" key={0}>
                                                     <div className="lab-inner">
                                                         <div className="lab-content">
-                                                            <h6><Link to="/blog-single">About</Link></h6>
+                                                            <h6><a href="https://www.termsandconditionsgenerator.com/live.php?token=OWtJxkzmfRh1fZ1bk70XDO1Gn3YgKqoH">Terms & Conditions</a></h6>
                                                         </div>
                                                     </div>
                                             </div>
@@ -111,7 +111,7 @@ class Footer extends Component {
                                              <div className="fm-item-widget lab-item" key={0}>
                                                     <div className="lab-inner">
                                                         <div className="lab-content">
-                                                            <h6><Link to="/blog-single">Terms & Conditions</Link></h6>
+                                                            <h6><a href="https://www.privacypolicygenerator.info/live.php?token=NdLq0yXLzLbVOjdI4C6CG60wuxYwH0gs">Privacy Policy</a></h6>
                                                         </div>
                                                     </div>
                                             </div>
@@ -120,16 +120,7 @@ class Footer extends Component {
                                              <div className="fm-item-widget lab-item" key={0}>
                                                     <div className="lab-inner">
                                                         <div className="lab-content">
-                                                            <h6><Link to="/blog-single">Privacy Policy</Link></h6>
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                        </div>
-                                        <div className="fm-item-content">
-                                             <div className="fm-item-widget lab-item" key={0}>
-                                                    <div className="lab-inner">
-                                                        <div className="lab-content">
-                                                            <h6><Link to="/blog-single">Returns, Refunds & Cancellation</Link></h6>
+                                                            <h6><a href="https://www.termsfeed.com/live/ef170adf-87cc-4bd6-974b-f61c11dd1188">Returns, Refunds & Cancellation</a></h6>
                                                         </div>
                                                     </div>
                                             </div>
