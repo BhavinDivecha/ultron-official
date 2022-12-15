@@ -41,12 +41,32 @@ function App() {
 			<Routes>
 				
 				<Route path="/" element={<HomeTwo />} />
-				<Route path="/pass" element={<PassSection />} />
-				<Route path="/pass" element={<PassSection />} />
+				<Route path="/pass" element={<PassSection imgUrl={'https://s3.ap-south-1.amazonaws.com/www.blackstonegamedevelopment.in/test.png'}/>} />
+				
+				<Route path="about" element={<AboutPage />} />
+				<Route path="gallery" element={<GalleryPage />} />
+				<Route path="game-list" element={<GameListSection />} />
+				<Route path="game-list2" element={<GameListTwoSection />} />
+				<Route path="partners" element={<PartnerPage />} />
+				<Route path="achievements" element={<AchievementPage />} />
+				<Route path="team" element={<TeamPage />} />
+				<Route path="team-single" element={<TeamSinglePage />} />
 				<Route path="*" element={<ErrorPage />} />
+				<Route path="shop" element={<ShopPage />} />
+				<Route path="shop-single" element={<ShopDetails />} />
+				<Route path="cart-page" element={<ShopCart />} />
+				<Route path="blog" element={<BlogPage />} />
+				<Route path="blog-2" element={<BlogPageTwo />} />
+				<Route path="blog-single" element={<BlogDetails />} />
+				<Route path="contact" element={<ContactUs />} />
+				<Route path="login" element={<LogIn />} />
+				<Route path="signup" element={<SignUp />} />
+				<Route path="success" element={<LogIn />} />
+				<Route path="signup" element={<SignUp />} />
 			</Routes>
 		</BrowserRouter>
 	);
 }
+
 
 export default App;
