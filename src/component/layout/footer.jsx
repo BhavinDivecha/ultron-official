@@ -31,7 +31,7 @@ class Footer extends Component {
                                             <img src="assets/images/footer/icons/01.png" alt="Phone-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Phone Number : +918850818625</span>
+                                            <span>Phone Number : <a href="tel:+918850818625">+918850818625</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@ class Footer extends Component {
                                             <img src="assets/images/footer/icons/02.png" alt="email-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Email : ultronofficial16@gmail.com</span>
+                                            <span>Email : <a href="mailto:ultronofficial16@gmail.com">ultronofficial16@gmail.com</a></span>
                                         </div>
                                     </div>
                                 </div>
