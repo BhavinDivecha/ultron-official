@@ -7,14 +7,14 @@ const PassShow = async () => {
     var shortLinkQR = '';
     console.log(searchParams.get('bgurl'));
     const bgUrl = searchParams.get('bgurl');
-    window.onload = async (event) => {
-        console.log('page is fully loaded');
+    console.log('page is fully loaded');
         let res = await fetch(
-            "http://www.payment.ultronofficial.online/api/genQr",
+            "http://localhost:9000/api/genQr",
             {
                 method: "POST",
                 body: JSON.stringify({
                     OrderID: searchParams.get('OrderID'),
+                    bgurl:document.getElementById("amount").value===799?"http://ultronofficial.online/pass1.jpeg":"http://ultronofficial.online/pass2.jpeg",
                 }),
                 headers: {
                     "Content-Type": "application/json",
@@ -24,7 +24,6 @@ const PassShow = async () => {
         let resJson = await res.json();
         console.log(resJson.code);
         shortLinkQR=(resJson.code);
-      };
   return (
     <div className="bg-img-pass" style={{background: `url(${bgUrl})`}}>
             <div className="container-pass">
