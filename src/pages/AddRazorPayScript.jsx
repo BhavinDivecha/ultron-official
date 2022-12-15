@@ -109,7 +109,6 @@ async function AddRazorPayScript()  {
             // alert(response.razorpay_payment_id);
             // alert(response.razorpay_order_id);
             // alert(response.razorpay_signature)
-            alert("Payment Successful");
             const data = await fetch('http://www.payment.ultronofficial.online/api/create/send/data', {
                 method: 'POST',
                 // mode: 'no-cors',
@@ -160,7 +159,7 @@ async function AddRazorPayScript()  {
             // }
             // )).save();
             console.log(data_pdf);
-
+            alert("Payment Successful");
         },
         "prefill": {
             "name": document.getElementById("firstname").value,
