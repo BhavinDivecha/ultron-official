@@ -14,7 +14,6 @@ const PassShow = async () => {
                 method: "POST",
                 body: JSON.stringify({
                     OrderID: searchParams.get('OrderID'),
-                    bgurl:document.getElementById("amount").value===799?"http://ultronofficial.online/pass1.jpeg":"http://ultronofficial.online/pass2.jpeg",
                 }),
                 headers: {
                     "Content-Type": "application/json",
