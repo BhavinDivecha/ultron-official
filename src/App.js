@@ -23,7 +23,7 @@ import SignUp from "./pages/signup";
 import TeamPage from "./pages/team";
 import TeamSinglePage from "./pages/team-single";
 import ErrorPage from "./pages/errorpage";
-import PassSingle from "./component/section/pass.jsx"
+import PassSection from "./component/section/pass.jsx"
 // import Footer from "./component/layout/footer";
 // import Header from "./component/layout/header";
 // import PageHeader from './component/layout/pageheader';
@@ -41,7 +41,7 @@ function App() {
 			<Routes>
 				
 				<Route path="/" element={<HomeTwo />} />
-				<Route path="/pass" element={<PassSingle />} />
+				<Route path="/pass" element={<PassSection />} />
 				<Route path="*" element={<ErrorPage />} />
 			</Routes>
 		</BrowserRouter>

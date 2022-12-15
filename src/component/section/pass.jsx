@@ -20,8 +20,8 @@ class PassSection extends Component {
   render() { 
       return (
 
-        // <PassShow/>
-        <div></div>
+        <PassShow/>
+        // <div></div>
         );
     }
 }
