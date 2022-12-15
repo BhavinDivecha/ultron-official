@@ -29,7 +29,7 @@ const PassShow =  () => {
     }
 
   return (
-          <div className="container">
+          <div className="container-pass2">
                   <img src={bgUrl} alt="Snow" style={{ width: "100%"}} />
       <div className="top-right" id="inner"> <button onClick={loadData} style={{ position: "absolute",top:"80px",right:"98px",width:"100px",height:"100px"}}>Load QR</button></div>
      
