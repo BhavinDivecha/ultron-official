@@ -36,7 +36,7 @@ class HomeTwo extends Component {
         
         return (
             <Fragment>
-                <HeaderTwo />
+                {/* <HeaderTwo /> */}
                 
                 <BannerTwo />
                 <GallerySection />
