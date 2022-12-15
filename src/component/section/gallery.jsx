@@ -4,28 +4,28 @@ import { Component, useState } from "react";
 let GalleryData = [
     {
         id: 1,
-        image: 'https://ultron-official.netlify.app/assets/images/gallery/01.jpg',
+        image: 'https://ultron-official.netlify.app/assets/images/gallery/1.jpg',
         title: '',
         desc: 'Playstation',
         catagory: 'steam',
     },
     {
         id: 2,
-        image: 'https://ultron-official.netlify.app/assets/images/gallery/02.jpg',
+        image: 'https://ultron-official.netlify.app/assets/images/gallery/2.jpg',
         title: '',
         desc: 'Playstation',
         catagory: 'origin',
     },
     {
         id: 3,
-        image: 'https://ultron-official.netlify.app/assets/images/gallery/03.jpg',
+        image: 'https://ultron-official.netlify.app/assets/images/gallery/3.jpg',
         title: '',
         desc: 'Playstation',
         catagory: 'origin',
     },
     {
         id:4,
-        image: 'https://ultron-official.netlify.app/assets/images/gallery/04.jpg',
+        image: 'https://ultron-official.netlify.app/assets/images/gallery/4.jpg',
         title: '',
         desc: 'Playstation',
         catagory: 'origin',
