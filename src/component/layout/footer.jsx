@@ -55,7 +55,7 @@ class Footer extends Component {
                                             <img src="assets/images/footer/icons/03.png" alt="location-icon" />
                                         </div>
                                         <div className="lab-content">
-                                            <span>Address : Navi Mumbai</span>
+                                            <span>Address : SIES COLLEGE nerul Navi Mumbai</span>
                                         </div>
                                     </div>
                                 </div>

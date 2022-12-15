@@ -140,7 +140,10 @@ async function AddRazorPayScript()  {
                     OrderID: response.razorpay_order_id,
                     amount:document.getElementById("amount").value,
                 }), headers: { 'Content-type': 'application/json' },
-            });
+            }).then((t) =>
+            // console.log(t)
+            t.json()
+        );
             // var opt = {
             //     margin:       1,
             //     filename:     response.razorpay_order_id+'.pdf',

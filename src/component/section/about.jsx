@@ -1,30 +1,24 @@
 import { Component } from "react";
 
 
-const subtitle = "who we are";
-const title = "we are professional team esport";
-const desc = "Distinctively provide acces mutfuncto users whereas transparent proceses somes ncentivize eficient functionalities rather than an extensible archtectur services and cross";
+const subtitle = "";
+const title = "ESPORTS AWARENESS PROGRAMME";
+const desc = "ESPORTS AWARENESS IN INDIA AS WELL AS MUMBAI ALSO JOINING THIS COMMUNITY. AND ULTRON OFFICIAL IS PROMOTING THIS AWARENESS TO NEW YOUNG YOUTH NOW IN MUMBAI AND NAVI MUMBAI ALSO.";
 
 
 let AboutListContent = [
     {
         imgUrl: 'https://ultron-official.netlify.app/assets/images/about/icon-1.png',
         imgAlt: 'About Icon',
-        title: '103k Community Earning',
-        desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
+        title: '20k+ Community Earning',
+        desc: '',
     },
     {
         imgUrl: 'https://ultron-official.netlify.app/assets/images/about/icon-2.png',
         imgAlt: 'About Icon',
-        title: '34m+ Registered Players',
-        desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
-    },
-    {
-        imgUrl: 'https://ultron-official.netlify.app/assets/images/about/icon-3.png',
-        imgAlt: 'About Icon',
-        title: '240k Streams Complete',
-        desc: 'Distinctively provide acces mutfuncto users whereas communicate leveraged services',
-    },
+        title: '1m+ Registered Players',
+        desc: '',
+    }
 ]
 
 

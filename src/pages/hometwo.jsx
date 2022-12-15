@@ -26,7 +26,6 @@ import GallerySection from "../component/section/gallery";
 
 import { Alert } from "react-bootstrap";
 import CheckParam from "./checkParam";
-import PassSection from "../component/section/pass";
 
 
 class HomeTwo extends Component {
