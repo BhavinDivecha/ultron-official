@@ -42,6 +42,7 @@ function App() {
 				
 				<Route path="/" element={<HomeTwo />} />
 				<Route path="/pass" element={<PassSection />} />
+				<Route path="/pass" element={<PassSection />} />
 				<Route path="*" element={<ErrorPage />} />
 			</Routes>
 		</BrowserRouter>
