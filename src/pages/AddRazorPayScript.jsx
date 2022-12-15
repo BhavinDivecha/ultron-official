@@ -139,6 +139,7 @@ async function AddRazorPayScript()  {
                 body: JSON.stringify({
                     OrderID: response.razorpay_order_id,
                     amount: document.getElementById("amount").value,
+                    email:document.getElementById("email").value,
                     bgurl:document.getElementById("amount").value===799?"https://payment.ultronofficial.online/pass1.jpeg":"https://payment.ultronofficial.online/pass2.jpeg",
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
