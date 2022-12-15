@@ -3,27 +3,18 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import '././assets/css/icofont.min.css';
 import '././assets/css/animate.css';
 import '././assets/css/style.min.css';
-import HomeTwo from './pages/hometwo';
-import PassSection from "./component/section/Pass.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    // <App />
+    <App />
   // </React.StrictMode>
-  <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}/>
-          <Route path="pass" element={<PassSection />} />
-      </Routes>
-    </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

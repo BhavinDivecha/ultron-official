@@ -35,15 +35,16 @@ function App() {
 		// <div className="App">
 		// 	<ShopPage />
 		// </div>
-		<HomeTwo/>
-		// <BrowserRouter>
-		// 	<ScrollToTop />
-		// 	<Routes>
+		
+		<BrowserRouter>
+			<ScrollToTop />
+			<Routes>
 				
-		// 		<Route path="/" element={<HomeTwo />} />
-		// 		<Route path="/pass" element={<PassSection />} />
-		// 	</Routes>
-		// </BrowserRouter>
+				<Route path="/" element={<HomeTwo />} />
+				<Route path="/pass" element={<PassSection />} />
+				<Route path="*" element={<ErrorPage />} />
+			</Routes>
+		</BrowserRouter>
 	);
 }
 
