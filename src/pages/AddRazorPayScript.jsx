@@ -97,7 +97,7 @@ async function AddRazorPayScript()  {
     console.log(data);
     document.getElementById('OrderID').value = data.id.toString();
     var options = {
-        "key": "rzp_test_iueh0Rl2ySFJjB", // Enter the Key ID generated from the Dashboard
+        "key": "rzp_live_wASVq9NNkDG0ws", // Enter the Key ID generated from the Dashboard
         "amount": data.amount.toString(), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency":  data.currency.toString(),
         "name": document.getElementById("firstname").value,
