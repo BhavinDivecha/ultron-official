@@ -92,13 +92,13 @@ async function AddRazorPayScript() {
     const number = (document.getElementById("mnumber").value);
 
     if (document.getElementById("amount").selectedIndex === 0) {
-        if (amount !== 50) {
+        if (amount != 50) {
             alert("Dont Modify Amount! As Normal Pass Amount is 50Rs");
             return;
         }
     }
     else {
-        if (amount !== 799) {
+        if (amount != 799) {
             alert("Dont Modify Amount! As VIP Pass Amount is 799Rs");
             return;
         }
