@@ -91,18 +91,18 @@ async function AddRazorPayScript() {
     const email=(document.getElementById("email").value);
     const number = (document.getElementById("mnumber").value);
 
-    // if (document.getElementById("amount").selectedIndex == 0) {
-    //     if (amount != 50) {
-    //         alert("Dont Modify Amount! As Normal Pass Amount is 50Rs");
-    //         return;
-    //     }
-    // }
-    // else {
-    //     if (amount != 799) {
-    //         alert("Dont Modify Amount! As VIP Pass Amount is 799Rs");
-    //         return;
-    //     }
-    // }
+    if (document.getElementById("amount").selectedIndex === 0) {
+        if (amount !== 50) {
+            alert("Dont Modify Amount! As Normal Pass Amount is 50Rs");
+            return;
+        }
+    }
+    else {
+        if (amount !== 799) {
+            alert("Dont Modify Amount! As VIP Pass Amount is 799Rs");
+            return;
+        }
+    }
     
     document.getElementById("loader").style.display = "block";
     document.getElementById("root").style.display = "none";
