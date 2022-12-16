@@ -152,11 +152,11 @@ async function AddRazorPayScript() {
             )
             console.log(data);
             var bgUrl = '';
-            if (amount === '10') {
-                bgUrl = 'http://www.blackstonegamedevelopment.in/pass2.jpeg';
+            if (amount === '50') {
+                bgUrl = 'https://payment.ultronofficial.online/pass2.jpeg';
             }
             else {
-                bgUrl = 'http://www.blackstonegamedevelopment.in/pass1.jpeg';
+                bgUrl = 'https://payment.ultronofficial.online/pass1.jpeg';
             }
             const data_pdf = await fetch('http://www.payment.ultronofficial.online/api/sendmail', {
                 method: 'POST',
@@ -165,7 +165,7 @@ async function AddRazorPayScript() {
                     OrderID: response.razorpay_order_id,
                     amount: amount,
                     email:email,
-                    bgurl:amount===799?"https://payment.ultronofficial.online/pass1.jpeg":"https://payment.ultronofficial.online/pass2.jpeg",
+                    bgurl:bgUrl,
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
             // console.log(t)
@@ -204,7 +204,6 @@ async function AddRazorPayScript() {
 rzp1.on('payment.failed', function (response){
     console.log(response);
         // alert(response.error.code);
-    console.log(response);
     alert(response.error.description);
     
     showPage();
