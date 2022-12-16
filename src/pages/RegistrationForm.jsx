@@ -59,7 +59,7 @@ class RegistrationForm extends Component {
                                 </div>
                                 <div className="form-group">
                                     <input 
-                                        type="text"
+                                        type="email"
                                         name="email"
                                         id="email"
                                         required
@@ -70,7 +70,7 @@ class RegistrationForm extends Component {
                                 </div>
                                 <div className="form-group">
                                     <input 
-                                        type="text"
+                                        type="tel"
                                         name="mnumber"
                                         id="mnumber"
                                         required

@@ -87,9 +87,6 @@ function showPage() {
   }
 async function AddRazorPayScript() {
     const amount=(document.getElementById("amount").value);
-    const name_user=(document.getElementById("firstname").value);
-    const email=(document.getElementById("email").value);
-    const number = (document.getElementById("mnumber").value);
 
     if (document.getElementById("amount").selectedIndex === 0) {
         if (amount != 50) {
@@ -113,7 +110,7 @@ async function AddRazorPayScript() {
         method: 'POST',
         // mode: 'no-cors',
         body: JSON.stringify({
-            amount: amount,
+            amount: document.getElementById("amount").value,
         }),
         headers: { 'Content-type': 'application/json' },
     }).then((t) =>
@@ -126,7 +123,7 @@ async function AddRazorPayScript() {
         "key": "rzp_live_wASVq9NNkDG0ws", // Enter the Key ID generated from the Dashboard
         "amount": data.amount.toString(), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency":  data.currency.toString(),
-        "name": name_user,
+        "name": document.getElementById("firstname").value,
         "description": "Buy Pass",
         "image": "http://www.payment.ultronofficial.online/logo.svg",
         "order_id": data.id.toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
@@ -141,10 +138,10 @@ async function AddRazorPayScript() {
                 body: JSON.stringify({
                     OrderID: response.razorpay_order_id,
                     PaymentID: response.razorpay_payment_id,
-                    firstname: name_user,
-                    email: email,
-                    mnumber: number,
-                    amount: amount,
+                    firstname: document.getElementById("firstname").value,
+                    email: document.getElementById("email").value,
+                    mnumber: document.getElementById("mnumber").value,
+                    amount: document.getElementById("amount").value,
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
                 // console.log(t)
@@ -163,8 +160,8 @@ async function AddRazorPayScript() {
                 // mode: 'no-cors',
                 body: JSON.stringify({
                     OrderID: response.razorpay_order_id,
-                    amount: amount,
-                    email:email,
+                    amount: document.getElementById("amount").value,
+                    email:document.getElementById("email").value,
                     bgurl:bgUrl,
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
@@ -189,9 +186,9 @@ async function AddRazorPayScript() {
             showPage();
         },
         "prefill": {
-            "name": name_user,
-            "email": email,
-            "contact": number
+            "name": document.getElementById("firstname").value,
+            "email": document.getElementById("email").value,
+            "contact": document.getElementById("mnumber").value,
         },
         "modal": {
             "ondismiss": function(){
