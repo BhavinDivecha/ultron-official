@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
 import { saveAs } from 'file-saver';
 
 
@@ -78,16 +78,42 @@ function ReturnPDfCode(bgUrl,qrData) {
 </html>
     `;
 }
-async function AddRazorPayScript()  {
-   
+function showPage() {
+    console.log('showPage');
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("root").style.display = "block";
+    var e = document.getElementById("RegistrationPage");
+      e.scrollIntoView();
+  }
+async function AddRazorPayScript() {
+    const amount=(document.getElementById("amount").value);
+    const name_user=(document.getElementById("firstname").value);
+    const email=(document.getElementById("email").value);
+    const number = (document.getElementById("mnumber").value);
+
+    // if (document.getElementById("amount").selectedIndex == 0) {
+    //     if (amount != 50) {
+    //         alert("Dont Modify Amount! As Normal Pass Amount is 50Rs");
+    //         return;
+    //     }
+    // }
+    // else {
+    //     if (amount != 799) {
+    //         alert("Dont Modify Amount! As VIP Pass Amount is 799Rs");
+    //         return;
+    //     }
+    // }
+    
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("root").style.display = "none";
     // const script = CallScript();
     // const datas;
-    console.log(document.getElementById("amount").value);
+    console.log(amount);
     const data = await fetch('http://www.payment.ultronofficial.online/api/razorpay', {
         method: 'POST',
         // mode: 'no-cors',
         body: JSON.stringify({
-            amount: document.getElementById("amount").value,
+            amount: amount,
         }),
         headers: { 'Content-type': 'application/json' },
     }).then((t) =>
@@ -100,7 +126,7 @@ async function AddRazorPayScript()  {
         "key": "rzp_live_wASVq9NNkDG0ws", // Enter the Key ID generated from the Dashboard
         "amount": data.amount.toString(), // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
         "currency":  data.currency.toString(),
-        "name": document.getElementById("firstname").value,
+        "name": name_user,
         "description": "Buy Pass",
         "image": "http://www.payment.ultronofficial.online/logo.svg",
         "order_id": data.id.toString(), //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
@@ -115,10 +141,10 @@ async function AddRazorPayScript()  {
                 body: JSON.stringify({
                     OrderID: response.razorpay_order_id,
                     PaymentID: response.razorpay_payment_id,
-                    firstname: document.getElementById("firstname").value,
-                    email: document.getElementById("email").value,
-                    mnumber: document.getElementById("mnumber").value,
-                    amount: document.getElementById("amount").value,
+                    firstname: name_user,
+                    email: email,
+                    mnumber: number,
+                    amount: amount,
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
                 // console.log(t)
@@ -126,7 +152,7 @@ async function AddRazorPayScript()  {
             )
             console.log(data);
             var bgUrl = '';
-            if (document.getElementById("amount").value === '10') {
+            if (amount === '10') {
                 bgUrl = 'http://www.blackstonegamedevelopment.in/pass2.jpeg';
             }
             else {
@@ -137,9 +163,9 @@ async function AddRazorPayScript()  {
                 // mode: 'no-cors',
                 body: JSON.stringify({
                     OrderID: response.razorpay_order_id,
-                    amount: document.getElementById("amount").value,
-                    email:document.getElementById("email").value,
-                    bgurl:document.getElementById("amount").value===799?"https://payment.ultronofficial.online/pass1.jpeg":"https://payment.ultronofficial.online/pass2.jpeg",
+                    amount: amount,
+                    email:email,
+                    bgurl:amount===799?"https://payment.ultronofficial.online/pass1.jpeg":"https://payment.ultronofficial.online/pass2.jpeg",
                 }), headers: { 'Content-type': 'application/json' },
             }).then((t) =>
             // console.log(t)
@@ -160,22 +186,44 @@ async function AddRazorPayScript()  {
             // )).save();
             console.log(data_pdf);
             alert("Payment Successful");
+            showPage();
         },
         "prefill": {
-            "name": document.getElementById("firstname").value,
-            "email": document.getElementById("email").value,
-            "contact": document.getElementById("mnumber").value
+            "name": name_user,
+            "email": email,
+            "contact": number
+        },
+        "modal": {
+            "ondismiss": function(){
+                console.log('Checkout form closed');
+                showPage();
+            }
         }
     };
     var rzp1 = new window.Razorpay(options);
 rzp1.on('payment.failed', function (response){
+    console.log(response);
         // alert(response.error.code);
-        alert(response.error.description);
+    console.log(response);
+    alert(response.error.description);
+    
+    showPage();
         // alert(response.error.source);
         // alert(response.error.step);
         // alert(response.error.reason);
         // alert(response.error.metadata.order_id);
         // alert(response.error.metadata.payment_id);
+});
+    rzp1.on('payment.cancelled', function (response) {
+    // alert(response.error.code);
+
+
+    alert(response.error.description);
+    // alert(response.error.source);
+    // alert(response.error.step);
+    // alert(response.error.reason);
+    // alert(response.error.metadata.order_id);
+    // alert(response.error.metadata.payment_id);
 });
     rzp1.open();
    

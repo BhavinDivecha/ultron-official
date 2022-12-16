@@ -1,11 +1,9 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import Rating from "../section/rating";
-import SocialMedia from '../section/socialmedia';
 
 const postTitle = "SUPPORT";
 const newsTitle = "Our Newsletter";
-const desc = "Upropriate brand economca sound technolog after covalent technology enable prospective wastng markets whereas propriate and brand economca sound technolog";
+const desc = "ULTRON OFFICIAL IS PROMOTING THIS AWARENESS TO NEW YOUNG YOUTH NOW IN MUMBAI AND NAVI MUMBAI ALSO.";
 const newsdesc = "Bigamer esports organization supported by community leaders";
 
 

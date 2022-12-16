@@ -48,11 +48,9 @@ const GallerySection = () => {
         <div className="gallery-section padding-top padding-bottom">
             <div className="container">
                 <ul className="gallery-filter">
-                    <li onClick={() => setItems(GalleryData) }><span className="category">Show All</span> <span className="itemcount">09</span></li>
-                    <li onClick={() => filterItem('origin') } ><span className="category">origin</span> <span className="itemcount">02</span></li>
-                    <li onClick={() => filterItem('steam') } ><span className="category">steam</span> <span className="itemcount">03</span></li>
-                    <li onClick={() => filterItem('playstation') } ><span className="category">playstation</span> <span className="itemcount">02</span></li>
-                    <li onClick={() => filterItem('uplay') } ><span className="category">uplay</span> <span className="itemcount">02</span></li>
+                    <li onClick={() => setItems(GalleryData) }><span className="category">Show All</span> <span className="itemcount">04</span></li>
+                    <li onClick={() => filterItem('origin') } ><span className="category">origin</span> <span className="itemcount">03</span></li>
+                    <li onClick={() => filterItem('steam') } ><span className="category">steam</span> <span className="itemcount">01</span></li>
                 </ul>
                 <div className="row g-4 masonary-gallery">
                     {
@@ -65,9 +63,9 @@ const GallerySection = () => {
                                             <img src={image} alt="gallery" />
                                         </div>
                                         <div className="gallery-content">
-                                            <a href="assets/images/gallery/01.jpg" className="img-pop" target="_blank"><i className="icofont-eye"></i></a>
-                                            <h3 className="title">{title}</h3>
-                                            <span>{desc}</span>
+                                            {/* <a href="assets/images/gallery/01.jpg" className="img-pop" target="_blank"><i className="icofont-eye"></i></a> */}
+                                            {/* <h3 className="title">{title}</h3> */}
+                                            {/* <span>{desc}</span> */}
                                         </div>
                                     </div>
                                 </div>

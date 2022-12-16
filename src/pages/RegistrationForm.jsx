@@ -1,10 +1,6 @@
 import { Component, Fragment } from "react";
 import queryString from 'query-string';
 import { Link } from "react-router-dom";
-import Footer from "../component/layout/footer";
-import Header from "../component/layout/header";
-import PageHeader from "../component/layout/pageheader";
-import SocialMedia from "../component/section/socialmedia";
 import CheckParam from "./checkParam";
 import AddRazorPayScript from "./AddRazorPayScript";
 
@@ -23,6 +19,14 @@ class RegistrationForm extends Component {
         };
     }
     render() { 
+        function showPage() {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("root").style.display = "block";
+          }
+        window.onload = (event) => {
+           var myVar = setTimeout(showPage, 3000);  
+        };
+
         return (
             <Fragment>
                 <CheckParam />
